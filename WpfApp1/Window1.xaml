@@ -1,0 +1,21 @@
+﻿<Controls:MetroWindow x:Class="WpfApp1.Window1"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="240" Width="340" Opacity="1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Background="#41B1E1">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Name="TextBoxLogin" Controls:TextBoxHelper.Watermark="Login" TextWrapping="Wrap" Text="" Grid.Row="0" Margin="10" Background="#FFD9EAFF" Grid.ColumnSpan="2"/>
+        <PasswordBox Name="PassBoxPass" Background="#FFD9EAFF" Controls:PasswordBoxHelper.CapsLockWarningToolTip="Нажата клавиша Caps Lock." Grid.Row="1" Margin="10" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonEnter" Margin="140 20" BorderThickness="0" Foreground="White" Background="#41B1E1" Content="Вход" Grid.Row="3"  MouseEnter="ButtonEnter_MouseEnter" MouseLeave="ButtonEnter_MouseLeave" Click="ButtonEnter_Click"/>
+        <Label Name="wrongAuthLabel" Visibility="Hidden" Content="Неверный логин или пароль" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,65,0,0" Grid.Row="1" Grid.RowSpan="2"/>
+    </Grid>
+</Controls:MetroWindow>
